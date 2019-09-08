@@ -24,16 +24,6 @@
   </url>
   
   <url>
-    <loc>http://bmc-toolbox.github.io/post/supported/</loc>
-    <lastmod>2019-09-08T11:10:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://bmc-toolbox.github.io/post/redfish/</loc>
-    <lastmod>2019-09-08T11:10:00+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://bmc-toolbox.github.io/categories/</loc>
     <priority>0</priority>
   </url>

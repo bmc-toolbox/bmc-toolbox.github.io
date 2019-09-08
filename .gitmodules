@@ -1,6 +1,3 @@
 [submodule "themes/github-project-landing-page"]
 	path = themes/github-project-landing-page
 	url = https://github.com/nsomar/github-project-landing-page.git
-[submodule "themes/mdi"]
-	path = themes/mdi
-	url = https://github.com/Zhai2333/hugo-shortcode-mdi

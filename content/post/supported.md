@@ -1,0 +1,16 @@
++++
+date = "2019-09-08T11:10:00+03:00"
+draft = false
+title = "Devices supported"
+weight = 8
++++
+
+- Dell M1000e    
+- Dell iDRAC8    
+- Dell iDRAC9    
+- HP c7000       
+- HP iLO3        
+- HP iLO4        
+- HP iLO5        
+- Supermicro X10 
+

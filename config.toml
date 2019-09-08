@@ -1,0 +1,9 @@
+baseURL = "http://bmc-toolbox.github.io/"
+languageCode = "en-us"
+title = "bmc-toolbox"
+theme = "github-project-landing-page"
+[params]
+description = "Vendor agnostic Baseboard Management Controller toolset"
+GitHubUser = "bmc-toolbox"
+github_project_name = "bmc-toolbox"
+project_url = "https://github.com/bmc-toolbox/"

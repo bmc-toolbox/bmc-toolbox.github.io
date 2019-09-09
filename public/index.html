@@ -133,20 +133,29 @@ body {
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">About</h2>
-                    <p><em>BMCs</em> are a fundamental component of datacenter bare metal assets like servers and chassis,</p>
+                    
+
+<p><em>BMCs</em> are a fundamental component of datacenter bare metal assets like servers and chassis,</p>
 
 <p>The bmc-toolbox leverages the <em>Baseboard Management Controller</em> to help manage the lifecycle of datacenter bare metal assets</p>
 
 <p>It provides tools to <strong>inventorize</strong>, <strong>configure</strong>, <strong>manage</strong>, <strong>authenticate/authorize</strong> a large fleet of bare metal assets through the BMC.</p>
 
 <ul>
-<li>bmclib - A Go lang library that provides a consistent set of methods to interface with BMCs.</li>
-<li>dora - tool to <strong>inventorize</strong> a fleet of bare metal servers and chassis assets.</li>
-<li>bmcbutler - tool to handle <strong>configuration management</strong>  for a fleet of bare metal server and chassis BMCs.</li>
-<li>actor - A single <strong>API webservice</strong> endpoint to interact with a fleet of bare metal BMCs.</li>
-<li>bmcldap - LDAP based <strong>authentication/authorization</strong> service/proxy for BMCs.</li>
-<li>bmcfwupd - tool to <strong>update</strong> the BMC firmware.</li>
+<li><em>bmclib</em> - A Go lang library that provides a consistent set of methods to interface with BMCs.</li>
+<li><em>dora</em> - tool to <strong>inventorize</strong> a fleet of bare metal servers and chassis assets.</li>
+<li><em>bmcbutler</em> - tool to handle <strong>configuration management</strong>  for a fleet of bare metal server and chassis BMCs.</li>
+<li><em>actor</em> - A single <strong>API webservice</strong> endpoint to interact with a fleet of bare metal BMCs.</li>
+<li><em>bmcldap</em> - LDAP based <strong>authentication/authorization</strong> service/proxy for BMCs.</li>
+<li><em>bmcfwupd</em> - tool to <strong>update</strong> the BMC firmware.</li>
 </ul>
+
+<h5 id="check-it-out-on-github"><strong>Check it out on Github</strong></h5>
+
+<figure><a href="https://github.com/bmc-toolbox">
+    <img src="/img/Octocat.png" width="60px" height="50px"/> </a>
+</figure>
+
 
                 </div>
             </div>
@@ -167,7 +176,47 @@ body {
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">bmclib</h2>
-                    <figure>
+                    
+
+<p>A vendor agnostic Baseboard Management Controller library that exposes methods to perform <em>inventory</em>, <em>management</em>, <em>configuration</em> actions.</p>
+
+<h5 id="devices-supported"><strong>Devices supported</strong></h5>
+
+<ul>
+<li>Dell M1000e</li>
+<li>Dell iDRAC8 (M630)</li>
+<li>Dell iDRAC9 (M640)</li>
+<li>Dell c7000<br /></li>
+<li>HPE iLO4 (Gen8, Gen8)</li>
+<li>HPE iLO5 (Gen10)</li>
+<li>Supermicro X10</li>
+<li>Supermicro X11</li>
+<li>Device not listed? get in touch, we&rsquo;d be happy to help add support :)</li>
+</ul>
+
+<h5 id="devices-work-in-progress"><strong>Devices Work In Progress</strong></h5>
+
+<ul>
+<li>Intel S2600WF0</li>
+<li>Quanta QuantaGrid D52BM-2U</li>
+<li>Work is underway to add Redfish support using the Gofish library</li>
+</ul>
+
+<h5 id="check-it-out-on-github"><strong>Check it out on Github</strong></h5>
+
+<p><a href="https://travis-ci.org/bmc-toolbox/bmclib"><img src="https://api.travis-ci.org/bmc-toolbox/bmclib.svg?branch=master" alt="Status" /></a>
+<a href="https://goreportcard.com/report/github.com/bmc-toolbox/bmclib"><img src="https://goreportcard.com/badge/github.com/bmc-toolbox/bmclib" alt="Go Report Card" /></a>
+<a href="https://godoc.org/github.com/bmc-toolbox/bmclib"><img src="https://godoc.org/github.com/bmc-toolbox/bmclib?status.svg" alt="GoDoc" /></a></p>
+
+<p><figure><a href="https://github.com/bmc-toolbox/bmclib">
+    <img src="/img/Octocat.png" width="60px" height="50px"/> </a>
+</figure>
+
+  <iframe src="https://ghbtns.com/github-btn.html?user=bmc-toolbox&repo=bmclib&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></p>
+
+<h5 id="the-figure-describes-various-bmc-toolbox-tools-that-currently-use-bmclib-to-interact-with-bmcs">The figure describes various bmc-toolbox tools that currently use bmclib to interact with BMCs.</h5>
+
+<figure>
     <img src="/img/bmc-toolbox-diag.png"/> 
 </figure>
 
@@ -191,9 +240,21 @@ body {
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Dora</h2>
-                    <p>Dora the bare metal asset discovery, inventory tool.</p>
+                    
 
-<iframe src="https://ghbtns.com/github-btn.html?user=bmc-toolbox&repo=dora&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+<p>Dora the bare metal asset discovery service periodically scans network subnets for server/chassis assets,<br />
+  and collects data from <em>discovered</em> assets,  these are then listed in its DB and kept updated.</p>
+
+<p>Dora acts as a dynamic inventory for bare metal assets, the data is exposed via a JSON API interface.</p>
+
+<h5 id="check-it-out-on-github"><strong>Check it out on Github</strong></h5>
+
+<p><figure><a href="https://github.com/bmc-toolbox/dora">
+    <img src="/img/Octocat.png" width="60px" height="50px"/> </a>
+</figure>
+ <iframe src="https://ghbtns.com/github-btn.html?user=bmc-toolbox&repo=dora&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></p>
+
+<h5 id="the-figure-describes-the-type-of-data-dora-collects">The figure describes the type of data Dora collects</h5>
 
 <figure>
     <img src="/img/dora-diag.png"/> 
@@ -219,7 +280,23 @@ body {
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">bmcbutler</h2>
-                    <iframe src="https://ghbtns.com/github-btn.html?user=bmc-toolbox&repo=bmcbutler&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                    
+
+<p>Bmcbutler is a BMC configuration management tool, its also capable of managing certificates for BMCs.</p>
+
+<h5 id="check-it-out-on-github"><strong>Check it out on Github</strong></h5>
+
+<p><a href="https://travis-ci.org/bmc-toolbox/bmcbutler"><img src="https://api.travis-ci.org/bmc-toolbox/bmcbutler.svg?branch=master" alt="Status" /></a>
+<a href="https://goreportcard.com/report/github.com/bmc-toolbox/bmcbutler"><img src="https://goreportcard.com/badge/github.com/bmc-toolbox/bmcbutler" alt="Go Report Card" /></a></p>
+
+<figure><a href="https://github.com/bmc-toolbox/bmcbutler">
+    <img src="/img/Octocat.png" width="60px" height="50px"/> </a>
+</figure>
+
+
+<p><iframe src="https://ghbtns.com/github-btn.html?user=bmc-toolbox&repo=bmcbutler&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></p>
+
+<h5 id="the-figure-describes-bmcbutler-handling-configuration-management-for-bmcs">The figure describes bmcbutler handling configuration management for BMCs.</h5>
 
 <figure>
     <img src="/img/bmcbutler-diag.png"/> 
@@ -245,12 +322,72 @@ body {
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Actor</h2>
-                    <iframe src="https://ghbtns.com/github-btn.html?user=bmc-toolbox&repo=actor&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                    
+
+<p>Actor abstracts away various management actions to BMCs (Baseboard Management Controllers), and exposes them through a consistent API.</p>
+
+<h5 id="check-it-out-on-github"><strong>Check it out on Github</strong></h5>
+
+<p><a href="https://goreportcard.com/report/github.com/bmc-toolbox/actor"><img src="https://goreportcard.com/badge/github.com/bmc-toolbox/actor" alt="Go Report Card" /></a>
+  <figure><a href="https://github.com/bmc-toolbox/actor">
+    <img src="/img/Octocat.png" width="60px" height="50px"/> </a>
+</figure>
+ <iframe src="https://ghbtns.com/github-btn.html?user=bmc-toolbox&repo=actor&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></p>
+
+<h5 id="the-figure-describes-how-actor-helps-trigger-actions-on-bmcs">The figure describes how actor helps trigger actions on BMCs</h5>
 
 <figure>
     <img src="/img/actor-diag.png"/> 
 </figure>
 
+
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    
+    <div class="content-section-b">
+    
+
+        <div class="container">
+
+            <div class="row">
+                <div>
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Redfish</h2>
+                    
+
+<h3 id="what-about-redfish">What about Redfish?</h3>
+
+<p>Redfish is a standard defined by the <em>DMTF</em>, hardware vendors are then expected to implement these standards,<br />
+  on thier BMCs, however the problems we faced when dealing with a large fleet were,</p>
+
+<ul>
+<li>Vendors are quite slow at implementing and keeping up with the released standards</li>
+<li>Some of the implementations are just incorrect or not functional (we try to report these when we find them)<br /></li>
+<li>Not all of the methods exposed by bmclib are currently exposed through Redfish.</li>
+</ul>
+
+<p>Redfish support is currently being added to bmclib through the Gofish library.<br />
+  The tools in the bmc-toolbox leverage bmclib which helps get around these limitations.</p>
+
+<pre><code>Redfish support as of 09 Sept 2019
+
+BMC type                       BMC firmware      Redfish version
+========                       ============      ===============
+idrac8 (M630)                   v2.60.60.60        Unsupported
+idrac9 (M640)                   v3.34.34.34        v1.4.0
+ilo4   (Gen8, Gen9)             v2.70              v1.0.0
+ilo5   (Gen10)                  v1.6.0             v1.6.0
+Supermicro (X10DRFF-CTG)         -                 v1.0.1
+QuantaGrid (D42A-2U)             -                 v1.1.0
+Intel      (S2600WF0)            -                 v1.1.0
+</code></pre>
 
                 </div>
             </div>
